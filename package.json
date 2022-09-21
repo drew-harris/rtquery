@@ -1,0 +1,14 @@
+{
+  "name": "state-share",
+  "version": "1.0.0",
+  "description": "A simple, typesafe websockets solution for shared state between clients. Like useState between devices.",
+  "main": "index.js",
+  "repository": "https://github.com/drew-harris/state-share",
+  "author": "drew-harris",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
+}

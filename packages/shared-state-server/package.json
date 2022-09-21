@@ -1,0 +1,23 @@
+{
+  "name": "shared-state-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    "./*": {
+      "import": "./lib/*.js"
+    }
+  },
+
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  }
+}
