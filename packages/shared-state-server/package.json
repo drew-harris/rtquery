@@ -10,12 +10,6 @@
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "exports": {
-    "./*": {
-      "import": "./lib/*.js"
-    }
-  },
-
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w"
