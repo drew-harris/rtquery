@@ -6,6 +6,9 @@
   "devDependencies": {
     "typescript": "^4.8.3"
   },
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
   "dependencies": {
     "rtquery-server": "*"
   }

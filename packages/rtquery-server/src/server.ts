@@ -11,6 +11,9 @@ export function createServer<T>(initialData: T): {
   wss.on("connection", (ws) => {
     // Runs on each connection
     console.log("Connection made");
+    ws.on("message", (data) => {
+      console.log(data.toString());
+    });
   });
 
   return {
