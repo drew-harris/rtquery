@@ -1,10 +1,13 @@
 import WebSocket, { WebSocketServer } from "ws";
 
-export function createServer<T>(initialData: T): {
+export function createServer<T>(
+  initialData: T,
+  port: number = 8080
+): {
   wss: WebSocketServer;
   getData: () => T;
 } {
-  const wss = new WebSocketServer({ port: 8080 });
+  const wss = new WebSocketServer({ port: port });
 
   const data: T = initialData;
 
@@ -14,6 +17,10 @@ export function createServer<T>(initialData: T): {
     ws.on("message", (data) => {
       console.log(data.toString());
     });
+  });
+
+  wss.on("listening", () => {
+    console.log(`Started listening on port: ${port}`);
   });
 
   return {
