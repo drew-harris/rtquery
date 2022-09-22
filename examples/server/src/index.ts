@@ -1,1 +1,3 @@
-import { sayMessage } from "shared-state-server/";
+import { sayMessage } from "rtquery-server";
+
+sayMessage();
